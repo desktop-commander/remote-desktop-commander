@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "app.desktopcommander/remote-desktop-commander",
+  "title": "Remote Desktop Commander",
+  "description": "Hosted MCP server connecting claude.ai, ChatGPT and other AI apps to your own computer",
+  "repository": {
+    "url": "https://github.com/desktop-commander/remote-desktop-commander",
+    "source": "github"
+  },
+  "websiteUrl": "https://mcp.desktopcommander.app",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/desktop-commander/remote-desktop-commander/main/assets/logo.png",
+      "sizes": ["512x512"],
+      "mimeType": "image/png"
+    }
+  ],
+  "version": "1.0.3",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.desktopcommander.app/mcp"
+    }
+  ]
+}

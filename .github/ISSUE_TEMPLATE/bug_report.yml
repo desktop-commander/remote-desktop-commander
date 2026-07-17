@@ -1,0 +1,42 @@
+name: Bug report
+description: Something isn't working with the Remote Desktop Commander service
+labels: [bug]
+body:
+  - type: dropdown
+    id: client
+    attributes:
+      label: AI client
+      description: Which client were you connecting from?
+      options:
+        - claude.ai / Claude Desktop
+        - Claude Code
+        - ChatGPT
+        - Cursor
+        - VS Code
+        - Gemini CLI
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: device-os
+    attributes:
+      label: Device OS
+      description: Operating system of the machine running the device agent
+      options:
+        - macOS
+        - Windows
+        - Linux
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you try, what did you expect, and what happened instead? Include any error messages from the client or the device agent terminal.
+    validations:
+      required: true
+  - type: input
+    id: agent-version
+    attributes:
+      label: Device agent version
+      description: Output of `npm view @wonderwhy-er/desktop-commander version` (the version npx fetches), if available

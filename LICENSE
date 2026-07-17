@@ -1,0 +1,19 @@
+Copyright (c) 2026 SIA Desktop Commander. All rights reserved.
+
+The documentation, manifests, and brand assets in this repository are
+published for reference so that users and software directories can discover,
+evaluate, and connect to the Remote Desktop Commander service. You may view
+and link to these materials. Any other copying, modification, or
+redistribution requires prior written permission.
+
+Forking and modifying this repository for the purpose of submitting
+contributions back to it is permitted. Documentation contributions submitted
+via pull request are accepted under these same terms, and by submitting one
+you grant SIA Desktop Commander the right to use, modify, and redistribute
+the contribution as part of this repository.
+
+The Remote Desktop Commander service itself is proprietary software. This
+repository does not contain its source code and grants no license to it.
+
+The open-source Desktop Commander local MCP server is licensed separately
+under the MIT License: https://github.com/wonderwhy-er/DesktopCommanderMCP

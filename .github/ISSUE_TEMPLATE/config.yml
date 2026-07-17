@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Discord community
+    url: https://discord.gg/kQ27sNnZr7
+    about: Ask questions and get help from the Desktop Commander community
+  - name: Device dashboard
+    url: https://mcp.desktopcommander.app
+    about: Manage your account and paired devices
+  - name: Local server issues
+    url: https://github.com/wonderwhy-er/DesktopCommanderMCP/issues
+    about: Report issues with the open-source local MCP server or the device agent CLI
