@@ -11,6 +11,8 @@ Reach your computer's filesystem and terminal from any AI app that supports remo
 - **Status:** currently in beta
 - **Demo:** [watch the video](https://youtu.be/C2kH5itFsGg)
 
+[![Add to Cursor](https://img.shields.io/badge/Add_to-Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)](cursor://anysphere.cursor-deeplink/mcp/install?name=remote-desktop-commander&config=eyJ1cmwiOiAiaHR0cHM6Ly9tY3AuZGVza3RvcGNvbW1hbmRlci5hcHAvbWNwIn0=)
+
 > This repository hosts the public manifests, documentation and issue tracker for the hosted service. The service implementation is not open source. For the open-source local (stdio) server, see [DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP).
 
 ## What you can do
@@ -58,7 +60,7 @@ claude mcp add --transport http remote-desktop-commander https://mcp.desktopcomm
 https://mcp.desktopcommander.app/mcp
 ```
 
-**Cursor** — add to `~/.cursor/mcp.json`:
+**Cursor** — one click: [**Add to Cursor**](cursor://anysphere.cursor-deeplink/mcp/install?name=remote-desktop-commander&config=eyJ1cmwiOiAiaHR0cHM6Ly9tY3AuZGVza3RvcGNvbW1hbmRlci5hcHAvbWNwIn0=). Or add to `~/.cursor/mcp.json` manually:
 
 ```json
 {
@@ -70,7 +72,13 @@ https://mcp.desktopcommander.app/mcp
 }
 ```
 
-**VS Code** — add to `.vscode/mcp.json` in your workspace (or your user-level `mcp.json`):
+**VS Code** — install the agent plugin (bundles this server):
+
+```bash
+copilot plugin install desktop-commander/remote-desktop-commander
+```
+
+Or add the server directly to `.vscode/mcp.json` in your workspace (or your user-level `mcp.json`):
 
 ```json
 {
