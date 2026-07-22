@@ -5,11 +5,7 @@
     "remote-desktop-commander": {
       "httpUrl": "https://mcp.desktopcommander.app/mcp",
       "oauth": {
-        "enabled": true,
-        "clientId": "gemini-cli-remote-desktop-commander",
-        "authorizationUrl": "https://mcp.desktopcommander.app/authorize",
-        "tokenUrl": "https://mcp.desktopcommander.app/token",
-        "scopes": ["mcp:tools"]
+        "enabled": true
       }
     }
   }
