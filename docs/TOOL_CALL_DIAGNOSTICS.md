@@ -10,11 +10,11 @@ client safety checks or the device account's operating-system permissions.
 
 | Visible outcome | Evidence to collect | Next step |
 | --- | --- | --- |
-| Client displays an explicit safety block and returns no device result | Exact message, timestamp and timezone, tool name, sanitized arguments, approval-card availability, any client request ID | Preserve the failure and contact the relevant client/service support channel. |
+| Client displays an explicit safety block and returns no device result | Redacted message, relevant time information, tool name, sanitized arguments, approval-card availability; keep request IDs private | Preserve the failure and contact the relevant client/service support channel. |
 | Client displays an approval card | Requested action and available approval controls | Review the action and use the client's normal approval flow. |
 | Authentication fails or the connection expires | Authentication error and relevant connection status | Follow the normal sign-in or reconnection flow. |
 | Device agent rejects a path or command | Agent error and the relevant configured restriction | Check that the requested operation is within the intended authorized scope. |
-| A process starts and then fails | Returned PID, stdout/stderr excerpts, exit code, timeout status | Diagnose the local process or downstream service using its actual error. |
+| A process starts and then fails | PID availability (use a placeholder publicly), sanitized stdout/stderr, exit code, timeout status | Diagnose the local process or downstream service using its actual error. |
 
 A missing PID or an absent local-history entry does not by itself prove that the
 hosted service never received a request. Local history can be bounded and is not
@@ -22,9 +22,14 @@ a substitute for service-side correlation. Write "unknown" for unobserved stages
 
 ## Record the version that was actually running
 
-When available, record the version reported by `get_config` or the device agent's
-startup output. Keep the agent version, client version, and any hosted deployment
-identifier in separate fields. Record "unknown" when a field is unavailable.
+Record the component name, observed version, and source together.
+`get_config.version` identifies the local DesktopCommanderMCP core/tool engine;
+label it as the core version. Keep the Remote Desktop Commander app/plugin
+version (from its UI, when exposed), any separately identified device-agent or
+wrapper version, the AI client version, and the hosted deployment version in
+separate fields. Startup output establishes only the component it explicitly
+names. Use "unknown" for unavailable components; do not infer their versions from
+the core value or a registry lookup. Share selected version fields only.
 
 `npm view @wonderwhy-er/desktop-commander version` reports the version currently
 published in the npm registry. It does not establish which version is running on
@@ -35,19 +40,21 @@ the paired device. Keep registry lookups separate from runtime evidence.
 Record one entry for each attempted action, including successful controls:
 
 ```text
-Timestamp and timezone:
+Approximate occurrence time/timezone, only if needed:
 AI client and version, if exposed:
-Running device-agent version and source of that value:
+DesktopCommanderMCP core version and observation source:
+Remote Desktop Commander app/plugin version, if exposed:
+Separately identified device-agent/wrapper version, if exposed:
 Hosted deployment version, if exposed:
 Tool name:
 Sanitized arguments and intended effect:
 Application permission setting at the time:
-Exact client-visible result:
+Client-visible result, with private values replaced:
 Approval card available: yes / no / unknown
-Client request/correlation ID: value / unavailable
+Client request/correlation ID available: yes / no / unknown (keep value private)
 Hosted service receipt: confirmed / absent with evidence / unknown
 Device receipt: confirmed / absent with evidence / unknown
-Process PID and exit status, if returned:
+Process PID returned: yes / no / unknown; placeholder and exit status:
 Configuration changes between attempts:
 ```
 
@@ -71,8 +78,12 @@ IDs or original logs only through an appropriate private support channel.
 
 Do not attach the complete `get_config` response or tool history by default: these
 may contain device/account identifiers, allowed paths, or other projects' activity.
-For security vulnerabilities, use [SECURITY.md](../SECURITY.md) rather than a public
-issue. Browser network archives can contain secrets even after automatic sanitizing;
+For suspected security vulnerabilities, follow the
+[security policy](../SECURITY.md#reporting-a-vulnerability) and use its
+[private vulnerability-reporting channel](https://github.com/desktop-commander/remote-desktop-commander/security/advisories/new).
+Ordinary authentication, delivery, and operational problems belong in a sanitized
+public issue or the relevant private support channel; a client safety refusal
+alone is not a vulnerability finding. Browser network archives can contain secrets even after automatic sanitizing;
 review them before sharing and provide them only when support requests them.
 
 ## References
