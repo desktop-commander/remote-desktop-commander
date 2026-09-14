@@ -39,4 +39,17 @@ body:
     id: agent-version
     attributes:
       label: Device agent version
-      description: Output of `npm view @wonderwhy-er/desktop-commander version` (the version npx fetches), if available
+      description: Version reported by get_config or the running agent startup output, if available. Write unknown if unavailable. npm view reports the registry version, not necessarily the running version. Share only the version, not the full configuration.
+  - type: textarea
+    id: tool-call-diagnostics
+    attributes:
+      label: Tool-call diagnostics (optional)
+      description: Record the tool name, sanitized arguments, timestamp and timezone, exact client error, approval-card availability, and the last confirmed execution stage. Include a returned process PID and exit status when available. Write unknown for unobserved stages; a missing PID alone does not prove the service never received the request.
+  - type: markdown
+    attributes:
+      value: |
+        Please remove credentials, tokens, cookies, private key material, internal hosts/IPs,
+        usernames, private paths, device identifiers, and unrelated activity from public reports.
+        Do not attach a complete configuration or tool-history dump by default.
+        See the [tool-call diagnostics guide](https://github.com/desktop-commander/remote-desktop-commander/blob/main/docs/TOOL_CALL_DIAGNOSTICS.md).
+        Use the private reporting channel in SECURITY.md for security vulnerabilities.
