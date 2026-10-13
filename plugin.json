@@ -1,7 +1,7 @@
 {
   "name": "remote-desktop-commander",
   "description": "Reach your own computer's filesystem and terminal from GitHub Copilot and VS Code — via Desktop Commander's hosted remote MCP server. Read and edit files, run terminal commands, and manage processes on machines you pair and control.",
-  "version": "1.0.22",
+  "version": "1.0.75",
   "author": {
     "name": "Desktop Commander",
     "url": "https://desktopcommander.app"
