@@ -1,6 +1,7 @@
 {
   "name": "remote-desktop-commander",
-  "version": "1.0.22",
+  "version": "1.0.75",
+  "description": "Remote Desktop Commander: use files, terminal and processes on your own computers from any AI app.",
   "mcpServers": {
     "remote-desktop-commander": {
       "httpUrl": "https://mcp.desktopcommander.app/mcp",
