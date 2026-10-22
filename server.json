@@ -15,7 +15,7 @@
       "mimeType": "image/png"
     }
   ],
-  "version": "1.0.79",
+  "version": "1.0.80",
   "remotes": [
     {
       "type": "streamable-http",
