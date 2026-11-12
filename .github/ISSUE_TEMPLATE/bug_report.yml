@@ -2,6 +2,15 @@ name: Bug report
 description: Something isn't working with the Remote Desktop Commander service
 labels: [bug]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Share sanitized excerpts only. Replace private values with consistent placeholders.
+        Remove credentials, tokens, cookies, internal hosts/IPs, usernames, private paths,
+        device identifiers, request IDs, and unrelated output. Keep original logs private.
+        For suspected vulnerabilities, follow the [security policy](https://github.com/desktop-commander/remote-desktop-commander/blob/main/SECURITY.md#reporting-a-vulnerability)
+        and use [private vulnerability reporting](https://github.com/desktop-commander/remote-desktop-commander/security/advisories/new).
+        See the [tool-call diagnostics guide](https://github.com/desktop-commander/remote-desktop-commander/blob/main/docs/TOOL_CALL_DIAGNOSTICS.md) for ordinary operational reports.
   - type: dropdown
     id: client
     attributes:
@@ -32,11 +41,28 @@ body:
     id: what-happened
     attributes:
       label: What happened?
-      description: What did you try, what did you expect, and what happened instead? Include any error messages from the client or the device agent terminal.
+      description: What did you try, expect, and observe? Include sanitized error excerpts only. Replace private values with placeholders.
     validations:
       required: true
   - type: input
     id: agent-version
     attributes:
-      label: Device agent version
-      description: Output of `npm view @wonderwhy-er/desktop-commander version` (the version npx fetches), if available
+      label: DesktopCommanderMCP core version
+      description: Record get_config.version and its source, or unknown. This is the local core version; npm view is a registry lookup. Share no full configuration.
+  - type: input
+    id: app-plugin-version
+    attributes:
+      label: Remote Desktop Commander app/plugin version
+      description: Version shown by the app/plugin UI, if exposed; otherwise unknown. Keep this separate from the local core and hosted service.
+  - type: textarea
+    id: tool-call-diagnostics
+    attributes:
+      label: Tool-call diagnostics (optional)
+      description: Include the tool name, sanitized arguments/error, approval-card availability, last confirmed stage, and exit status. Use unknown for unobserved stages; keep request IDs and raw logs private.
+  - type: markdown
+    attributes:
+      value: |
+        In diagnostic excerpts, identify a process with a placeholder such as `<process-A>`.
+        State whether a PID or request ID was returned; share original identifiers only
+        through an appropriate private support channel when needed.
+        A missing PID alone does not establish whether the hosted service received a call.
