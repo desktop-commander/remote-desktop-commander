@@ -105,7 +105,7 @@ gemini extensions install https://github.com/desktop-commander/remote-desktop-co
    dsh plugin --profile web add dsh-remote-dc
    ```
 
-2. Open **Settings → Remote Desktop Commander → Connect account → Open authorization page**. Complete OAuth sign-in in a browser on the computer running dsh. Use the same Desktop Commander account you used to pair the device.
+2. Open **Settings → Remote DC for dsh → Connect account → Open authorization page**. Complete OAuth sign-in in a browser on the computer running dsh. Use the same Desktop Commander account you used to pair the device.
 3. Return to Settings and select **Refresh devices** to check that your paired machine appears.
 
 See the [English README for dsh-remote-dc](https://github.com/lonelycrab888/dsh-remote-dc/blob/main/README.en.md) for more details.
