@@ -97,6 +97,19 @@ Or add the server directly to `.vscode/mcp.json` in your workspace (or your user
 gemini extensions install https://github.com/desktop-commander/remote-desktop-commander
 ```
 
+**DeepSeek Harness (community integration)** — requires dsh 0.2.2-rc.1 or later.
+
+1. In the desktop app, open **Plugins → Install existing plugin** and enter `dsh-remote-dc`. For the Web profile, run:
+
+   ```bash
+   dsh plugin --profile web add dsh-remote-dc
+   ```
+
+2. Open **Settings → Remote DC for dsh → Connect account → Open authorization page**. Complete OAuth sign-in in a browser on the computer running dsh. Use the same Desktop Commander account you used to pair the device.
+3. Return to Settings and select **Refresh devices** to check that your paired machine appears.
+
+See the [English README for dsh-remote-dc](https://github.com/lonelycrab888/dsh-remote-dc/blob/main/README.en.md) for more details.
+
 ### 3. Try it
 
 These work against any machine running the agent, no setup needed:
