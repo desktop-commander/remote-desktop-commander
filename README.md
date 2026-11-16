@@ -97,6 +97,14 @@ Or add the server directly to `.vscode/mcp.json` in your workspace (or your user
 gemini extensions install https://github.com/desktop-commander/remote-desktop-commander
 ```
 
+**Antigravity:**
+
+```bash
+agy plugin install https://github.com/desktop-commander/remote-desktop-commander
+```
+
+Then open **Customizations → Installed → MCP Servers** and click **Authenticate** to sign in.
+
 ### 3. Try it
 
 These work against any machine running the agent, no setup needed:

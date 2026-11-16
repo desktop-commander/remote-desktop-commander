@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "remote-desktop-commander": {
+      "serverUrl": "https://mcp.desktopcommander.app/mcp"
+    }
+  }
+}
