@@ -1,0 +1,21 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "remote-desktop-commander",
+  "displayName": "Remote Desktop Commander",
+  "description": "Use files, terminal and processes on your own computers from Antigravity, through Desktop Commander's hosted remote MCP server.",
+  "version": "1.1.28",
+  "logo": "assets/logo.png",
+  "suggestedPrompts": [
+    "List my connected devices and tell me which ones are online",
+    "List the contents of my home directory and tell me what's there",
+    "Find the 5 largest files in my Downloads folder"
+  ],
+  "author": {
+    "name": "Desktop Commander",
+    "url": "https://desktopcommander.app"
+  },
+  "homepage": "https://mcp.desktopcommander.app",
+  "repository": "https://github.com/desktop-commander/remote-desktop-commander",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": ["mcp", "remote", "terminal", "filesystem", "process", "automation", "desktop-commander"]
+}
