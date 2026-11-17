@@ -97,6 +97,14 @@ Or add the server directly to `.vscode/mcp.json` in your workspace (or your user
 gemini extensions install https://github.com/desktop-commander/remote-desktop-commander
 ```
 
+**Antigravity:**
+
+```bash
+agy plugin install https://github.com/desktop-commander/remote-desktop-commander
+```
+
+Then open **Customizations → Installed → MCP Servers** and click **Authenticate** to sign in.
+
 **DeepSeek Harness (community integration)** — requires dsh 0.2.2-rc.1 or later.
 
 1. In the desktop app, open **Plugins → Install existing plugin** and enter `dsh-remote-dc`. For the Web profile, run:
