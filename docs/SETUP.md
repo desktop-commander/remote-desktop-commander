@@ -73,3 +73,7 @@ The [dashboard](https://mcp.desktopcommander.app) lists your connected machines 
 **The `remote` command fails to run:**
 
 - Make sure Node.js 18+ is installed on the target machine (`node --version`).
+
+**A tool call is blocked or fails after the connection succeeds:**
+
+- Use the [tool-call diagnostics guide](TOOL_CALL_DIAGNOSTICS.md) to distinguish client approvals, safety blocks, authentication errors, agent restrictions, and process failures. Preserve the exact result and use the normal approval or support route.
