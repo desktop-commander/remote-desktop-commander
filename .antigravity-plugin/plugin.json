@@ -3,8 +3,8 @@
   "name": "remote-desktop-commander",
   "displayName": "Remote Desktop Commander",
   "description": "Use files, terminal and processes on your own computers from Antigravity, through Desktop Commander's hosted remote MCP server.",
-  "version": "1.1.28",
-  "logo": "assets/logo.png",
+  "version": "1.1.39",
+  "logo": "assets/logo-antigravity.png",
   "suggestedPrompts": [
     "List my connected devices and tell me which ones are online",
     "List the contents of my home directory and tell me what's there",
